@@ -31,9 +31,6 @@ def classify(dataset, labels):
     macro_f1_avg = 0
     micro_f1_avg = 0
     acc_avg = 0
-    
-    #y_train = y_train[train_mask == True,:].argmax(axis = 1)
-    #y_val = y_val[val_mask==True,:].argmax(axis=1)
         
     
     for i in range(10):
@@ -41,13 +38,8 @@ def classify(dataset, labels):
         node_embedding = q_z.rsample()
         node_embedding = node_embedding.numpy()
         
-        #X_train = node_embedding[train_mask == True,:]
-        #X_val = node_embedding[val_mask==True,:]
-        
         X_train, X_test, y_train, y_test = train_test_split(node_embedding, y, train_size=0.2, test_size=1000, random_state=2019)
-        
 
-        #clf = SVC(gamma='auto').fit(X_train, y_train)
         clf = LogisticRegression(solver="lbfgs", multi_class="multinomial",random_state=0).fit(X_train,y_train)
         
         y_pred = clf.predict(X_test)

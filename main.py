@@ -12,7 +12,6 @@ from classification import classify
 #parameters setting
 parser = argparse.ArgumentParser(description="s_co_embedding settings")
 parser.add_argument('--dataset', type=str, default='cora')
-#parser.add_argument('--distribution', type=str, default='vmf')
 parser.add_argument('--activation', type=str, default='relu')#'rle' or 'tanh‘
 parser.add_argument('--h_dim', type=int, default=512, help='number of units in hidden layer')
 parser.add_argument('--z_dim', type=int, default=20, help='dimensions of latent variables')

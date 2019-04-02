@@ -5,7 +5,7 @@ Further details about HCVA can be found in our paper.
 
 ## Requirements
 =================
-* PyTorch
+* PyTorch 1.0
 * python 3.6
 * scikit-learn
 * scipy

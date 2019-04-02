@@ -59,8 +59,6 @@ def load_data(dataset):
         Y[i,label[i]] = 1
 
     print("finishing loading {}!".format(dataset))
-    
-    #return adj, attribute,y_train, y_val, y_test, train_mask, val_mask, test_mask, Y
     return adj, attribute, Y
 
 

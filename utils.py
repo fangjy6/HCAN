@@ -96,15 +96,6 @@ def get_roc_score(reconstruction, edge_pos, edge_neg, shape, logits=True):
 
 
 def mask_test_edges(adj, p_val=0.05, p_test=0.10):
-    """
-    adj is an adjacant matrix (scipy sparse matrix)
-    
-    return adj_train, train_edges, val_edges, val_edges_false, test_edges, test_edges_false
-    adj_train : training adjacant matrix
-    train_edges : array indicating the training edges
-    val_edges : array indicating the validation edges
-    val_edge_false: array indicating the false edges in validation dataset
-    """
     adj_row = adj.nonzero()[0]
     adj_col = adj.nonzero()[1]
     
