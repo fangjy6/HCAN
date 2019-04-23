@@ -165,8 +165,6 @@ def mask_test_feas(features,p_val=0.05, p_test=0.10):
         feas.append([fea_row[i], fea_col[i]])
         feas_dic[(fea_row[i], fea_col[i])] = 1
     false_feas_dic = {}
-    #num_test = int(np.floor(len(feas) / 10.))
-    #num_val = int(np.floor(len(feas) / 20.))
     num_val = round(len(feas)*p_val)
     num_test = round(len(feas)*p_test)
     all_fea_idx = np.arange(len(feas))
